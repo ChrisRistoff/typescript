@@ -1,2 +1,3 @@
-var sum = function (a, b) { return a + b; };
-console.log(sum(6, "2"));
+"use strict";
+const sum = (a, b) => a + b;
+console.log(sum(6, 2));

@@ -1,4 +1,5 @@
-var user = {
+"use strict";
+const user = {
     name: 'John',
     age: 30,
     address: {
@@ -6,7 +7,7 @@ var user = {
         number: 123,
     },
 };
-var user2 = {
+const user2 = {
     name: 'John',
     age: 30,
     address: {
@@ -14,8 +15,8 @@ var user2 = {
         number: 123,
     },
 };
-var getUserAddress = function (user) {
+const getUserAddress = (user) => {
     return user.address;
 };
-var userAddress = getUserAddress(user);
-console.log(userAddress);
+const userAddress = getUserAddress(user);
+console.log(userAddress); // Main Street
