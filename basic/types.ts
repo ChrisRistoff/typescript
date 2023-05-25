@@ -44,9 +44,11 @@ let result1 = doSomething(10); // OK
 let result2 = doSomething('10'); // OK
 let result3 = doSomething(true); // OK
 
-console.log(result1); // 10
 console.log(result2); // '10'
 console.log(result3); // true
+console.log(result1); // 10
+
+
 
 function doSomething1(number: unknown) {
   if (typeof number === 'number') {
@@ -66,3 +68,23 @@ let bool: boolean = true;
 bool = false; // OK
 
 // bool = "true"; // Error: Type '"true"' is not assignable to type 'boolean'.
+
+
+
+// bigint is a primitive data type in TypeScript and is immutable.
+// it is used to represent integers between -2^53 - 1 and 2^53 - 1
+let a: bigint = BigInt(124123214125);
+let b: bigint = 124123214125n;
+
+let c: bigint = a + b;
+
+console.log(c); // 248246428250n
+
+
+
+// symbol is a primitive data type in TypeScript and is immutable.
+// It is used to generate unique identifiers for objects.
+// they are often used as property keys that are private to the object for which they are created.
+let mySymbol: symbol = Symbol('mySymbol');
+
+console.log(mySymbol); // Symbol(mySymbol)
