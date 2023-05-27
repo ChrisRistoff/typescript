@@ -1,0 +1,46 @@
+"use strict";
+// Void and Never types are used to represent functions that do not return a value.
+// Void is used when a function may return but has no return value.
+// Never is used when a function may not return at all.
+// For example, a function that always throws an error.
+// Void and Never are subtypes of all other types.
+// That means you can assign a void or never value to a number or string variable.
+// Void and Never are not the same as null or undefined.
+// we assign the return value to addNumbers1 to void
+// because the function does not return a value and is not assigned to a variable
+const addNumbers2 = () => {
+    console.log(1 + 2);
+};
+// we assign the return value to throwError to never
+// because the function will never return a value and will always throw an error
+const throwError = (message) => {
+    throw new Error(message);
+};
+////////////////////////////////////////////////////////////////////////////////////////
+// Enums /////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+var Classes;
+(function (Classes) {
+    Classes[Classes["Warrior"] = 1] = "Warrior";
+    Classes[Classes["Mage"] = 2] = "Mage";
+    Classes[Classes["Paladin"] = 3] = "Paladin";
+    Classes[Classes["Bishop"] = 4] = "Bishop";
+    Classes[Classes["Rogue"] = 5] = "Rogue";
+    Classes[Classes["Hunter"] = 6] = "Hunter";
+    Classes[Classes["Druid"] = 7] = "Druid";
+})(Classes || (Classes = {}));
+;
+// Enums are used to define a set of named constants.
+// Enums are useful when you have a small set of values that are known at compile time.
+// For example, a set of character classes in a game.
+// Enums are also useful when you want to define a set of values that 
+// are more descriptive than numbers.
+console.log(Classes.Warrior); // 1
+const randomUsername = {
+    weapon: "Keyboard",
+    hp: 9001,
+    attack: 10,
+    defense: 10,
+    class: Classes.Warrior,
+};
+console.log(randomUsername);
