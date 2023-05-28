@@ -25,13 +25,13 @@ const throwError = (message: string): never => {
 
 
 enum Classes {
-  "Warrior" = 1,
-  "Mage" = 2,
-  "Paladin" = 3,
-  "Bishop" = 4,
-  "Rogue" = 5,
-  "Hunter" = 6,
-  "Druid" = 7,
+  "Warrior" = "Warrior",
+  "Mage" = "Mage",
+  "Paladin" = "Paladin",
+  "Bishop" = "Bishop",
+  "Rogue" = "Rogue",
+  "Hunter" = "Hunter",
+  "Druid" = "Druid",
 };
 
 type Character = {

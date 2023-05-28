@@ -21,13 +21,13 @@ const throwError = (message) => {
 //////////////////////////////////////////////////////////////////////////////////////
 var Classes;
 (function (Classes) {
-    Classes[Classes["Warrior"] = 1] = "Warrior";
-    Classes[Classes["Mage"] = 2] = "Mage";
-    Classes[Classes["Paladin"] = 3] = "Paladin";
-    Classes[Classes["Bishop"] = 4] = "Bishop";
-    Classes[Classes["Rogue"] = 5] = "Rogue";
-    Classes[Classes["Hunter"] = 6] = "Hunter";
-    Classes[Classes["Druid"] = 7] = "Druid";
+    Classes["Warrior"] = "Warrior";
+    Classes["Mage"] = "Mage";
+    Classes["Paladin"] = "Paladin";
+    Classes["Bishop"] = "Bishop";
+    Classes["Rogue"] = "Rogue";
+    Classes["Hunter"] = "Hunter";
+    Classes["Druid"] = "Druid";
 })(Classes || (Classes = {}));
 ;
 // Enums are used to define a set of named constants.
