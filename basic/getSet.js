@@ -25,4 +25,3 @@ const person3 = new Person3('Mark', 39);
 person3.age = 1000;
 console.log("Age: ", person3.age);
 console.log("Name: ", person3.name);
-console.log(person3);
