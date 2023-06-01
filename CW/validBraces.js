@@ -9,12 +9,12 @@ function validBraces(braces) {
     return braces.length === 0;
 }
 exports.validBraces = validBraces;
+const openingBraces = '({[';
+const closingBraces = ')}]';
 function validBraces2(braces) {
-    const openingBraces = '({[';
-    const closingBraces = ')}]';
     const stack = [];
-    for (let i = 0; i < braces.length; i++) {
-        const currentBrace = braces[i];
+    for (let brace of braces) {
+        const currentBrace = brace;
         if (openingBraces.includes(currentBrace)) {
             stack.push(currentBrace);
         }

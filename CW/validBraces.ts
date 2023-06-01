@@ -7,13 +7,16 @@ export function validBraces(braces: string): boolean {
   return braces.length === 0
 }
 
+
+
+const openingBraces = '({[';
+const closingBraces = ')}]';
+
 function validBraces2(braces: string) {
-  const openingBraces = '({[';
-  const closingBraces = ')}]';
   const stack: string[] = [];
 
-  for (let i = 0; i < braces.length; i++) {
-    const currentBrace = braces[i];
+  for (let brace of braces) {
+    const currentBrace = brace;
 
     if (openingBraces.includes(currentBrace)) {
       stack.push(currentBrace);
@@ -21,7 +24,7 @@ function validBraces2(braces: string) {
       const lastOpeningBrace = stack.pop();
 
       if (
-        lastOpeningBrace === undefined ||
+        !lastOpeningBrace ||
         openingBraces.indexOf(lastOpeningBrace) !== closingBraces.indexOf(currentBrace)
       ) {
         return false;
