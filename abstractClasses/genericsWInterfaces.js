@@ -46,3 +46,16 @@ class AutomobileClass {
 }
 const automobileClass = new AutomobileClass(AutomobileTypes.car, AutomobileBrands.ford, [AutomobileColors.red, AutomobileColors.white], 4);
 console.log(automobileClass);
+class Truck {
+    constructor(brand, colors, doors, capacity, economy, driverName) {
+        this.type = "truck";
+        this.brand = brand;
+        this.colors = colors;
+        this.doors = doors;
+        this.capacity = capacity;
+        this.economy = economy;
+        this.driverName = driverName;
+    }
+}
+const truck = new Truck(AutomobileBrands.ford, [AutomobileColors.red, AutomobileColors.white], 4, 100, "high", "John Doe");
+console.log(truck);

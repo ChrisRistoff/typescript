@@ -28,6 +28,11 @@ interface Automobile2<Type, Brand, Colors, Doors> {
   doors: Doors;
 }
 
+interface CommercialVehicle {
+  capacity: number;
+  economy: "high" | "medium" | "low";
+}
+
 const lamborghini: Automobile2 <
   AutomobileTypes,
   AutomobileBrands,
@@ -75,3 +80,39 @@ const automobileClass = new AutomobileClass(
 );
 
 console.log(automobileClass);
+
+class Truck implements Automobile2 <string,
+                  AutomobileBrands, AutomobileColors, number>, CommercialVehicle {
+  type: string;
+  brand: AutomobileBrands;
+  colors: AutomobileColors[];
+  doors: number;
+  capacity: number;
+  economy: "high" | "medium" | "low";
+  driverName?: string;
+
+  constructor(
+    brand: AutomobileBrands,
+    colors: AutomobileColors[],
+    doors: number,
+    capacity: number,
+    economy: "high" | "medium" | "low",
+    driverName?: string,
+  ) {
+    this.type = "truck";
+    this.brand = brand;
+    this.colors = colors;
+    this.doors = doors;
+    this.capacity = capacity;
+    this.economy = economy;
+    this.driverName = driverName;
+  }
+}
+
+const truck = new Truck(
+  AutomobileBrands.ford,
+  [AutomobileColors.red, AutomobileColors.white],
+  4, 100, "high", "John Doe"
+);
+
+console.log(truck);
