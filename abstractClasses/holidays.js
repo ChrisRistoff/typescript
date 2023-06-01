@@ -22,16 +22,6 @@ class Department {
         }
         return '{ No holidays }';
     }
-    printHolidays() {
-        if (this.holidays.length > 0) {
-            this.holidays.forEach((holiday) => {
-                console.log(`${holiday.date.toDateString()} - ${holiday.reason}`);
-            });
-        }
-        else {
-            console.log('{ No holidays }');
-        }
-    }
 }
 class ITDepartment extends Department {
     constructor() {
